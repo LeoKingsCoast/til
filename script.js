@@ -1,3 +1,8 @@
+/**
+ * @brief Turns a file path relative to the `tils` directory into the absolute path to the file
+ *
+ * @param url_path {string} File path relative to the `tils` directory without `.md`. Leading "/" is optional
+ */
 function url_to_file_path(url_path) {
     content_dir = '/tils'
     if(url_path === '' || url_path === '/') {
@@ -6,10 +11,22 @@ function url_to_file_path(url_path) {
     return content_dir + url_path + '.md'
 }
 
+/**
+ * @brief Renders markdown formatted text into the HTML element with ID "content"
+ */
 function render_markdown(md_file_content) {
     document.getElementById("content").innerHTML = marked.parse(md_file_content)
 }
 
+/**
+ * @brief Renders a markdown file in the `tils` directory
+ *
+ * @param url_path {string} File path relative to the `tils` directory without `.md`. Leading "/" is optional
+ *
+ * @example 
+ * render_page("/gdb/attaching-gdb-to-other-processes")
+ * render_page("gdb/attaching-gdb-to-other-processes")
+ */
 async function render_page(url_path) {
     md_file_path = url_to_file_path(url_path)
     console.log(`Opening page: ${url_path}`)
