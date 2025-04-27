@@ -16,6 +16,7 @@ function url_to_file_path(url_path) {
  */
 function render_markdown(md_file_content) {
     document.getElementById("content").innerHTML = marked.parse(md_file_content)
+    hljs.highlightAll(); // Highlight code blocks after rendering
 }
 
 /**
