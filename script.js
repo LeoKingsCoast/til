@@ -41,4 +41,4 @@ async function render_page(url_path) {
         });
 }
 
-render_page('')
+render_page(window.location.pathname)
