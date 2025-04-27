@@ -58,4 +58,8 @@ async function render_page(url_path) {
         });
 }
 
+const gfmHeadingId = window.markedGfmHeadingId.gfmHeadingId;
+
+marked.use(gfmHeadingId());
+
 render_page(window.location.pathname)
