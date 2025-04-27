@@ -1,5 +1,5 @@
 function url_to_file_path(url_path) {
-    content_dir = 'tils'
+    content_dir = '/tils'
     if(url_path === '' || url_path === '/') {
         return content_dir + '/index.md'
     }
@@ -12,7 +12,9 @@ function render_markdown(md_file_content) {
 
 async function render_page(url_path) {
     md_file_path = url_to_file_path(url_path)
-    
+    console.log(`Opening page: ${url_path}`)
+    console.log(`Markdown file: ${md_file_path}`)
+
     fetch(md_file_path)
         .then(response => {
             if(!response.ok) {
@@ -28,7 +30,6 @@ async function render_page(url_path) {
             if (response.headers.get('Content-Type')?.includes('text/html')) {
                 throw new Error("Unexpected HTML response: TIL file not found");
             }
-            console.log("I passed the error")
             return response.text()
         })
         .then(md_file_content => {
