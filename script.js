@@ -4,7 +4,7 @@
  * @param url_path {string} File path relative to the `tils` directory without `.md`. Leading "/" is optional
  */
 function url_to_file_path(url_path) {
-    content_dir = '/tils'
+    let content_dir = '/tils'
     if(url_path === '' || url_path === '/') {
         return content_dir + '/index.md'
     }
@@ -29,7 +29,7 @@ function render_markdown(md_file_content) {
  * render_page("gdb/attaching-gdb-to-other-processes")
  */
 async function render_page(url_path) {
-    md_file_path = url_to_file_path(url_path)
+    let md_file_path = url_to_file_path(url_path)
     console.log(`Opening page: ${url_path}`)
     console.log(`Markdown file: ${md_file_path}`)
 
