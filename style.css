@@ -1,0 +1,28 @@
+body {
+    background-color: #1B1D3C;
+    color: #F2F2F2; 
+    margin: 0px;
+}
+
+header {
+    background-color: #A3A3C2;
+    display: flex;
+}
+
+header h1 {
+    margin: 0px;
+}
+
+header nav {
+    display: flex;
+}
+
+ul.nav_bar {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+ul.nav_bar li {
+    border: 5px solid #1B1D3C;
+}
