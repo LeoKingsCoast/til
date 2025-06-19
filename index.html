@@ -9,18 +9,22 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     </head>
     <body>
-        <header>
-            <h1 class="page_title">
-                Leo's Today I Learned (TIL)
-            </h1>
-            <nav>
-                <ul class="nav_bar">
-                    <li><button>Content Map</button></li>
-                    <li><button>My Github</button></li>
-                </ul>
-                <div>Search</div>
-            </nav>
-        </header>
+        <div class="header">
+            <div class="header_left">
+                <div class="page_title">
+                    Leo's Today I Learned (TIL)
+                </div>
+                <div class="nav_bar">
+                    <ul>
+                        <li><button class="nav_button">Content Map</button></li>
+                        <li><button class="nav_button">My Github</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_right">
+                <div class="search_widget">Search</div>
+            </div>
+        </div>
         <div id="content">Loading file...</div>
 
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
