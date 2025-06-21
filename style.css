@@ -1,14 +1,15 @@
 * {
     font-family: "Helvetica", sans-serif;
-    color: #F2F2F2; 
 }
 
 body {
+    color: #F2F2F2; 
     background-color: #1B1D3C;
     margin: 0px;
 }
 
 .header {
+    color: #1b1d3c;
     background-color: #A3A3C2;
     display: flex;
     justify-content: space-between;
@@ -25,6 +26,24 @@ body {
 .page_title {
     padding: 10px 20px;
     margin: 0px;
+}
+
+.sidebar {
+    background-color: #a3a3c2;
+    position: fixed;
+    height: 100%;
+    width: 10vw;
+}
+
+.sidebar button {
+    width: 100%;
+}
+
+.main {
+    position: relative;
+    top: 0;
+    left: 10vw;
+    width: calc(100% - 10vw);
 }
 
 .nav_bar {
@@ -54,4 +73,8 @@ button.nav_button {
 
 .search_widget {
     text-align: center;
+}
+
+#content {
+    padding: 1rem;
 }
