@@ -4,11 +4,21 @@
  * @param url_path {string} File path relative to the `tils` directory without `.md`. Leading "/" is optional
  */
 function url_to_file_path(url_path) {
-    let content_dir = '/tils'
+    const content_dir = '/tils';
     if(url_path === '' || url_path === '/') {
-        return content_dir + '/index.md'
+        return content_dir + '/index.md';
     }
-    return content_dir + url_path + '.md'
+    return content_dir + url_path + '.md';
+}
+
+function setup_buttons() {
+    const sidebar_control_btn = document.getElementById("sidebar_control");
+    const sidebar = document.querySelector(".sidebar")
+
+    sidebar_control_btn.addEventListener("click", function (e) {
+        sidebar_control_btn.classList.toggle("active");
+        sidebar.classList.toggle("active");
+    })
 }
 
 /**
@@ -64,3 +74,4 @@ const gfmHeadingId = window.markedGfmHeadingId.gfmHeadingId;
 marked.use(gfmHeadingId());
 
 render_page(window.location.pathname)
+setup_buttons()
