@@ -7,30 +7,34 @@
         <link href="/style.css" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
+        <div class="header">
+            <div class="header_left">
+                <button id="sidebar_control">
+                    <i class="bx bx-menu"></i>
+                </button>
+                <div class="page_title">
+                    Leo's Today I Learned (TIL)
+                </div>
+                <div class="nav_bar">
+                    <ul>
+                        <li><button class="nav_button">Content Map</button></li>
+                        <li><button class="nav_button">My Github</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_right">
+                <div class="search_widget">Search</div>
+            </div>
+        </div>
         <div class="sidebar">
             <button>C</button>
             <button>GDB</button>
             <button>Javascript</button>
         </div>
         <div class="main">
-            <div class="header">
-                <div class="header_left">
-                    <div class="page_title">
-                        Leo's Today I Learned (TIL)
-                    </div>
-                    <div class="nav_bar">
-                        <ul>
-                            <li><button class="nav_button">Content Map</button></li>
-                            <li><button class="nav_button">My Github</button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="header_right">
-                    <div class="search_widget">Search</div>
-                </div>
-            </div>
             <div id="content">Loading file...</div>
         </div>
 
